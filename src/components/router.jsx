@@ -6,6 +6,8 @@ import AddMovie from "../pages/AddMovie";
 import MovieDetails from "../pages/MovieDetails";
 import UpdateMovie from "../pages/UpdateMovie";
 import MyCollection from "../pages/MyCollection";
+import Login from "../pages/Login";
+import Registration from "../pages/Registration";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,8 @@ const router = createBrowserRouter([
       { path: "/movies/:id", element: <MovieDetails></MovieDetails> },
       { path: "/movies/update/:id", element: <UpdateMovie></UpdateMovie> },
       { path: "/movies/my-collection", element: <MyCollection></MyCollection> },
+      { path: "/login", element: <Login></Login> },
+      { path: "/registration", element: <Registration></Registration> },
     ],
   },
 ]);
