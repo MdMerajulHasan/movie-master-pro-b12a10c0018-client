@@ -14,7 +14,6 @@ const Login = () => {
       .then((result) => {
         const currentUser = result.user;
         setUser(currentUser);
-        console.log(currentUser);
       })
       .catch((error) => {
         toast(error.message);
@@ -30,7 +29,6 @@ const Login = () => {
       .then((result) => {
         const currentUser = result.user;
         setUser(currentUser);
-        console.log(currentUser);
         e.target.reset();
       })
       .catch((error) => {

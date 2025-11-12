@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AuthContext } from "./AuthContext";
 import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
   updateProfile,
@@ -30,8 +31,18 @@ const AuthProvider = ({ children }) => {
 
   // update user name and photoURL
   const update = (updatedData) => {
-   return updateProfile(auth.currentUser, updatedData);
+    return updateProfile(auth.currentUser, updatedData);
   };
+
+  // observing and get the user
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   const authInfo = {
     register,
