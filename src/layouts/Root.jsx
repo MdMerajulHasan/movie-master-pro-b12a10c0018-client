@@ -1,10 +1,12 @@
 import React from "react";
 import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router";
+import Navbar from "../components/Navbar";
 
 const Root = () => {
   return (
     <div>
+      <Navbar></Navbar>
       <Outlet></Outlet>
       <Toaster></Toaster>
     </div>

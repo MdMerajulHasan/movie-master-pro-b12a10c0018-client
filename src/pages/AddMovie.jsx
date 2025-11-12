@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const AddMovie = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <div>
+      <h2>Ad Movies</h2>
+    </div>
+  );
 };
 
 export default AddMovie;

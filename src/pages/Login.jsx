@@ -36,9 +36,11 @@ const Login = () => {
       });
   };
   return (
-    <div className="flex w-1/2 mx-auto text-secondary justify-center items-center">
+    <div className="flex w-4/5 md:w-1/2 mx-auto text-secondary justify-center items-center">
       <form className="w-full" onSubmit={handleLogin}>
-        <h2>Login</h2>
+        <h2 className="text-center font-bold text-xl md:text-2xl lg:text-4xl">
+          Login
+        </h2>
         <fieldset className="fieldset">
           <legend className="fieldset-legend text-secondary">
             Give your mail
@@ -74,7 +76,7 @@ const Login = () => {
         <p className="flex justify-end">Forgot Password?</p>
         <button
           type="submit"
-          className="text-center mx-auto btn-secondary w-full"
+          className="text-center mx-auto btn-secondary w-full my-1"
         >
           Login
         </button>

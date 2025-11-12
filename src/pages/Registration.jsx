@@ -46,9 +46,11 @@ const Registration = () => {
       });
   };
   return (
-    <div className="flex w-1/2 mx-auto justify-center items-center text-primary">
+    <div className="flex w-4/5 md:w-1/2 mx-auto justify-center items-center text-primary">
       <form className="w-full" onSubmit={handleRegister}>
-        <h2>Register</h2>
+        <h2 className="text-center font-bold text-xl md:text-2xl lg:text-4xl">
+          Register
+        </h2>
         <fieldset className="fieldset">
           <legend className="fieldset-legend text-primary">
             Give your name
