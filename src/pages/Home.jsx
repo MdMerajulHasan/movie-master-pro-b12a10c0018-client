@@ -1,7 +1,11 @@
+import { useLoaderData } from "react-router";
+import CarouselSlider from "../components/CarouselSlider";
+
 const Home = () => {
+  const movies = useLoaderData();
   return (
     <div>
-      <h1>this is home</h1>
+      <CarouselSlider movies={movies}></CarouselSlider>
     </div>
   );
 };

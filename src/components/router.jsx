@@ -14,7 +14,11 @@ const router = createBrowserRouter([
     path: "/",
     Component: Root,
     children: [
-      { index: true, Component: Home },
+      {
+        index: true,
+        loader: () => fetch("http://localhost:3000/movies"),
+        Component: Home,
+      },
       { path: "/movies", element: <AllMovies></AllMovies> },
       { path: "/movies/add", element: <AddMovie></AddMovie> },
       { path: "/movies/:id", element: <MovieDetails></MovieDetails> },
