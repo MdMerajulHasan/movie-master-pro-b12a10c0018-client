@@ -32,7 +32,7 @@ const Home = () => {
     <div className="mt-5 md:mt-10 mb-0">
       <CarouselSlider movies={movies}></CarouselSlider>
       {/* statistics section */}
-      <h2 className="mt-5 md:mt-10 mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">
+      <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">
         Statistics
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 mx-auto text-center">
@@ -47,17 +47,76 @@ const Home = () => {
       </div>
       {/* ------------------------------------------------------------------ */}
       {/* Top Rated Movies section */}
-      <h2 className="mt-5 md:mt-10 mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">
+      <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">
         Top Rated Movies
       </h2>
       <MovieCard movies={topMovies}></MovieCard>
       {/* ------------------------------------------------------------------ */}
       {/* Recently Added Movies section */}
-      <h2 className="mt-5 md:mt-10 mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">
+      <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">
         Recently Added
       </h2>
       <MovieCard movies={recentMovies}></MovieCard>
       {/* ------------------------------------------------------------------ */}
+      {/* Genre Section */}
+      <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">
+        Genre
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 w-11/12 mx-auto">
+        <div className="bg-base-200 p-2 rounded-md">
+          <img
+            className="w-[300px] h-[150px] rounded-md"
+            src="https://i.ibb.co.com/VcRKVyGh/action.webp"
+            alt=""
+          />
+          <button
+            className="text-white font-bold bg-linear-to-r from-red-500 to-red-300 rounded-sm w-full mt-1"
+            style={{ width: "100%" }}
+          >
+            Action
+          </button>
+        </div>
+        <div className="bg-base-200 p-2 rounded-md">
+          <img
+            className="w-[300px] h-[150px] rounded-md"
+            src="https://i.ibb.co.com/Xf0fL8nL/drama.jpg"
+            alt=""
+          />
+          <button
+            className="text-white font-bold bg-linear-to-r from-red-500 to-red-300 rounded-sm w-full mt-1"
+            style={{ width: "100%" }}
+          >
+            Drama
+          </button>
+        </div>
+        <div className="bg-base-200 p-2 rounded-md">
+          <img
+            className="w-[300px] h-[150px] rounded-md"
+            src="https://i.ibb.co.com/N2XfGz8Y/comedy.webp"
+            alt=""
+          />
+          <button
+            className="text-white font-bold bg-linear-to-r from-red-500 to-red-300 rounded-sm w-full mt-1"
+            style={{ width: "100%" }}
+          >
+            Comedy
+          </button>
+        </div>
+        <div className="bg-base-200 p-2 rounded-md">
+          <img
+            className="w-[300px] h-[150px] rounded-md"
+            src="https://i.ibb.co.com/Df5Nrv8S/sifi.jpg"
+            alt=""
+          />
+          <button
+            className="text-white font-bold bg-linear-to-r from-red-500 to-red-300 rounded-sm w-full mt-1"
+            style={{ width: "100%" }}
+          >
+            Si-fi
+          </button>
+        </div>
+      </div>
+      {/* ------------------------------------------------------------------------*/}
     </div>
   );
 };

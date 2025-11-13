@@ -9,7 +9,6 @@ const MovieCard = ({ movies }) => {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
   }, []);
-  console.log(movies);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {movies.map((movie) => (
@@ -33,7 +32,7 @@ const MovieCard = ({ movies }) => {
           <div className="w-4/5  mx-auto font-bold">
             <Link className="w-full mx-auto" to={`/movies/${movie._id}`}>
               <button
-                className="text-white bg-linear-to-r from-red-500 to-red-300 rounded-sm w-full"
+                className="text-white font-bold bg-linear-to-r from-red-500 to-red-300 rounded-sm w-full"
                 style={{ width: "100%" }}
               >
                 See more...
