@@ -25,6 +25,9 @@ const Navbar = () => {
       <li>
         <NavLink to="/movies/my-collection">My Collection</NavLink>
       </li>
+      <li>
+        <NavLink to="/movies/add">Add Movie</NavLink>
+      </li>
     </>
   );
   return (

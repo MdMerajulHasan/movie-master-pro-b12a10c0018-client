@@ -1,7 +1,7 @@
 import React, { use } from "react";
 import { BsStarFill } from "react-icons/bs";
 import { FaGripLinesVertical } from "react-icons/fa";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import { AuthContext } from "../contexts/AuthContext";
 
 const MovieDetails = () => {
@@ -47,7 +47,9 @@ const MovieDetails = () => {
           <p>Added By: {movie.addedBy}</p>
           {user?.email === movie?.addedBy && (
             <div className="flex gap-5 items-center">
-              <button className="btn btn-secondary w-20">Edit</button>
+              <Link to={`/movies/update/${movie._id}`}>
+                <button className="btn btn-secondary w-20">Edit</button>
+              </Link>
               <button className="btn btn-primary w-20">Delete</button>
             </div>
           )}

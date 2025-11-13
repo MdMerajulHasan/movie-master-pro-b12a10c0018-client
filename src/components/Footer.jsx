@@ -18,6 +18,9 @@ const Footer = () => {
             <li>
               <Link to="/movies/my-collection">My Collection</Link>
             </li>
+            <li>
+              <Link to="/movies/add">Add Movie</Link>
+            </li>
           </ul>
         </div>
         <div>
