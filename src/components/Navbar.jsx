@@ -70,8 +70,8 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex items-center gap-2">
-            <Link onClick={handleLogout} className="btn-primary w-20">
-              Logout
+            <Link onClick={handleLogout}>
+              <button className="btn btn-primary w-20">Logout</button>
             </Link>
             <div className="dropdown dropdown-end">
               <div
@@ -80,7 +80,7 @@ const Navbar = () => {
                 className="btn btn-ghost btn-circle avatar"
               >
                 <span>
-                  <ImProfile className="text-primary" size={30}></ImProfile>
+                  <ImProfile className="text-primary" size={40}></ImProfile>
                 </span>
               </div>
               <ul
@@ -102,11 +102,11 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="flex items-center gap-2">
-            <Link className="btn-primary w-20" to="/login">
-              Login
+            <Link to="/login">
+              <button className="btn btn-secondary w-20">Login</button>
             </Link>
-            <Link className="btn-primary w-20" to="/registration">
-              Register
+            <Link to="/registration">
+              <button className="btn btn-primary w-20">Register</button>
             </Link>
           </div>
         )}

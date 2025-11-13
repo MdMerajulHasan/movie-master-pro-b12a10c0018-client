@@ -1,10 +1,12 @@
-import React from "react";
+import React, { use } from "react";
 import { BsStarFill } from "react-icons/bs";
 import { FaGripLinesVertical } from "react-icons/fa";
 import { useLoaderData } from "react-router";
+import { AuthContext } from "../contexts/AuthContext";
 
 const MovieDetails = () => {
   const movie = useLoaderData();
+  const { user } = use(AuthContext);
 
   return (
     <div className="hero bg-base-200 my-5 md:my-10">
@@ -43,6 +45,12 @@ const MovieDetails = () => {
           </div>
           <p>Cast: {movie.cast}</p>
           <p>Added By: {movie.addedBy}</p>
+          {user?.email === movie?.addedBy && (
+            <div className="flex gap-5 items-center">
+              <button className="btn btn-secondary w-20">Edit</button>
+              <button className="btn btn-primary w-20">Delete</button>
+            </div>
+          )}
         </div>
       </div>
     </div>
