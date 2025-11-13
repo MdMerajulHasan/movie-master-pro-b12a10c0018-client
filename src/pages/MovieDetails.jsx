@@ -1,9 +1,50 @@
 import React from "react";
+import { BsStarFill } from "react-icons/bs";
+import { FaGripLinesVertical } from "react-icons/fa";
+import { useLoaderData } from "react-router";
 
 const MovieDetails = () => {
+  const movie = useLoaderData();
+
   return (
-    <div>
-      <h2>Movie Details</h2>
+    <div className="hero bg-base-200 my-5 md:my-10">
+      <div className="hero-content text-xs md:text-base text-primary flex-col md:flex-row-reverse">
+        <img src={movie.posterUrl} className="max-w-sm rounded-lg shadow-2xl" />
+        <div>
+          <div className="flex gap-0.5 items-center">
+            <p className="flex gap-0.5 items-center">
+              {movie.duration} min
+              <FaGripLinesVertical />
+            </p>
+            <p className="flex gap-0.5 items-center">
+              {movie.genre}
+              <FaGripLinesVertical />
+            </p>
+            <p>{movie.releaseYear}</p>
+          </div>
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold">
+            {movie.title}
+          </h1>
+          <p className="flex gap-0.5 items-center">
+            {movie.rating}
+            <BsStarFill></BsStarFill>
+          </p>
+          <p className="py-6">{movie.plotSummary}</p>
+          <div className="flex gap-0.5 items-center">
+            <p className="flex gap-0.5 items-center">
+              {movie.language}
+              <FaGripLinesVertical />
+            </p>
+            <p className="flex gap-0.5 items-center">
+              {movie.country}
+              <FaGripLinesVertical />
+            </p>
+            <p>{movie.director}</p>
+          </div>
+          <p>Cast: {movie.cast}</p>
+          <p>Added By: {movie.addedBy}</p>
+        </div>
+      </div>
     </div>
   );
 };
