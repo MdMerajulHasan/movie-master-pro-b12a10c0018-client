@@ -8,11 +8,13 @@ import UpdateMovie from "../pages/UpdateMovie";
 import MyCollection from "../pages/MyCollection";
 import Login from "../pages/Login";
 import Registration from "../pages/Registration";
+import Error404 from "../pages/Error404";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    errorElement: <Error404></Error404>,
     children: [
       {
         index: true,
@@ -39,7 +41,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/movies/my-collection/:email",
-        loader: ({params}) =>
+        loader: ({ params }) =>
           fetch(`http://localhost:3000/movies/my-collection/${params.email}`),
         element: <MyCollection></MyCollection>,
       },
