@@ -1,10 +1,15 @@
 import React from "react";
 import { Toaster } from "react-hot-toast";
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader";
 
 const Root = () => {
+  const navigation = useNavigation();
+  if (navigation.state === "loading") {
+    return <Loader></Loader>;
+  }
   return (
     <div>
       <Navbar></Navbar>

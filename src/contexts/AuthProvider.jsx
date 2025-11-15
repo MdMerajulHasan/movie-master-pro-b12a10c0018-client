@@ -13,7 +13,7 @@ import { auth } from "../firebase/firebase.init";
 const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
   const [user, setUser] = useState(null);
-  console.log(user);
+  const [loading, setLoading] = useState(false);
 
   // register with email and password
   const register = (email, password) => {
@@ -58,6 +58,8 @@ const AuthProvider = ({ children }) => {
     login,
     update,
     logout,
+    loading,
+    setLoading,
   };
   return <AuthContext value={authInfo}>{children}</AuthContext>;
 };

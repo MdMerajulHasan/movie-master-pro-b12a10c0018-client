@@ -23,7 +23,9 @@ const Navbar = () => {
         <NavLink to="/movies">All Movies</NavLink>
       </li>
       <li>
-        <NavLink to="/movies/my-collection">My Collection</NavLink>
+        <NavLink to={`/movies/my-collection/${user?.email}`}>
+          My Collection
+        </NavLink>
       </li>
       <li>
         <NavLink to="/movies/add">Add Movie</NavLink>
@@ -61,7 +63,10 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost font-bold text-xs md:text-xl lg:text-2xl text-primary">
+        <a
+          href="/"
+          className="btn btn-ghost font-bold text-xs md:text-xl lg:text-2xl text-primary"
+        >
           Movie Master Pro
         </a>
       </div>
