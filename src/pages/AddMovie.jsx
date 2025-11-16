@@ -214,7 +214,7 @@ const AddMovie = () => {
             type="submit"
             className="text-center mx-auto btn-primary w-full"
           >
-            Add
+            Submit
           </button>
         </form>
       </div>

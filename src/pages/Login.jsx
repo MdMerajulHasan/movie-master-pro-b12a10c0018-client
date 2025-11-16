@@ -1,7 +1,7 @@
 import React, { use, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import { FaEye } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { RiGoogleFill } from "react-icons/ri";
 import toast from "react-hot-toast";
 import Loader from "../components/Loader";
@@ -9,6 +9,8 @@ import Loader from "../components/Loader";
 const Login = () => {
   const { loading, setLoading, login, setUser, googleLogin } = use(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+
   // login or signup with google
   const handleGoogleLogin = () => {
     setLoading(true);
@@ -17,6 +19,7 @@ const Login = () => {
         setLoading(false);
         const currentUser = result.user;
         setUser(currentUser);
+        navigate("/");
       })
       .catch((error) => {
         setLoading(false);
@@ -36,6 +39,7 @@ const Login = () => {
         const currentUser = result.user;
         setUser(currentUser);
         e.target.reset();
+        navigate("/");
       })
       .catch((error) => {
         setLoading(false);

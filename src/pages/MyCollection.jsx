@@ -3,7 +3,6 @@ import { Link, useLoaderData } from "react-router";
 
 const MyCollection = () => {
   const movies = useLoaderData();
-
   return (
     <div className="my-5 md:my-10">
       <h2 className="mb-1 md:mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">

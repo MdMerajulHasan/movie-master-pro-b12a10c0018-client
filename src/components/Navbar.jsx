@@ -22,14 +22,20 @@ const Navbar = () => {
       <li>
         <NavLink to="/movies">All Movies</NavLink>
       </li>
-      <li>
-        <NavLink to={`/movies/my-collection/${user?.email}`}>
-          My Collection
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/movies/add">Add Movie</NavLink>
-      </li>
+      {user ? (
+        <>
+          <li>
+            <NavLink to={`/movies/my-collection/${user?.email}`}>
+              My Collection
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/movies/add">Add Movie</NavLink>
+          </li>
+        </>
+      ) : (
+        ""
+      )}
     </>
   );
   return (

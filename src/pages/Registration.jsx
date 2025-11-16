@@ -3,13 +3,14 @@ import { AuthContext } from "../contexts/AuthContext";
 import toast from "react-hot-toast";
 import { FaEye } from "react-icons/fa";
 import { RiGoogleFill } from "react-icons/ri";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import Loader from "../components/Loader";
 
 const Registration = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { loading, setLoading, update, setUser, register, googleLogin } =
     use(AuthContext);
+  const navigate = useNavigate();
 
   // google login or signup
   const handleGoogleLogin = () => {
@@ -19,6 +20,7 @@ const Registration = () => {
         setLoading(false);
         const user = result.user;
         setUser(user);
+        navigate("/");
       })
       .catch((error) => {
         setLoading(false);
@@ -63,6 +65,7 @@ const Registration = () => {
           });
         setLoading(false);
         e.target.reset();
+        navigate("/");
       })
       .catch((error) => {
         setLoading(false);
