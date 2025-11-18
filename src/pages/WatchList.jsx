@@ -1,10 +1,11 @@
 import React, { use } from "react";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import { AuthContext } from "../contexts/AuthContext";
 import Loader from "../components/Loader";
 
 const WatchList = () => {
   const watchedMovies = useLoaderData();
+  console.log(watchedMovies);
   const { loading } = use(AuthContext);
   if (loading) {
     return <Loader></Loader>;
@@ -35,12 +36,12 @@ const WatchList = () => {
           })}
         </div>
       ) : (
-        <div className="flex flex-col gap-1 justify-center items-center">
+        <div className="flex mb-5 md:mb-10 flex-col gap-1 justify-center items-center">
           <p className="text-primary font-bold text-center">
             You Have Not Played Any Movie!
           </p>
           <Link to="/movies">
-            <button className="btn btn-secondary w-20">Play Now!</button>
+            <button className="btn btn-secondary w-20">Play</button>
           </Link>
         </div>
       )}
