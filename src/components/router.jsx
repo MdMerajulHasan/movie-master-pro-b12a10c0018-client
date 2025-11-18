@@ -20,12 +20,12 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch("http://localhost:3000/movies"),
+        loader: () => fetch("https://movie-master-pro-api.vercel.app/movies"),
         Component: Home,
       },
       {
         path: "/movies",
-        loader: () => fetch("http://localhost:3000/movies"),
+        loader: () => fetch("https://movie-master-pro-api.vercel.app/movies"),
         element: <AllMovies></AllMovies>,
       },
       {
@@ -39,13 +39,13 @@ const router = createBrowserRouter([
       {
         path: "/movies/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/movies/${params.id}`),
+          fetch(`https://movie-master-pro-api.vercel.app/movies/${params.id}`),
         element: <MovieDetails></MovieDetails>,
       },
       {
         path: "/movies/update/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/movies/${params.id}`),
+          fetch(`https://movie-master-pro-api.vercel.app/movies/${params.id}`),
         element: (
           <PrivateRoute>
             <UpdateMovie></UpdateMovie>
@@ -55,7 +55,9 @@ const router = createBrowserRouter([
       {
         path: "/movies/my-collection/:email",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/movies/my-collection/${params.email}`),
+          fetch(
+            `https://movie-master-pro-api.vercel.app/movies/my-collection/${params.email}`
+          ),
         element: (
           <PrivateRoute>
             <MyCollection></MyCollection>
@@ -65,7 +67,9 @@ const router = createBrowserRouter([
       {
         path: "/watch-list/:email",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/watch-list/${params.email}`),
+          fetch(
+            `https://movie-master-pro-api.vercel.app/watch-list/${params.email}`
+          ),
         element: (
           <PrivateRoute>
             <WatchList></WatchList>

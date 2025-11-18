@@ -51,7 +51,7 @@ const Registration = () => {
           toast(error.message);
         });
         setUser(currentUser);
-        fetch("http://localhost:3000/users/add", {
+        fetch("https://movie-master-pro-api.vercel.app/users/add", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(userToDB),

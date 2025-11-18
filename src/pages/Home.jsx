@@ -25,7 +25,7 @@ const Home = () => {
   // load users data from database
   useEffect(() => {
     setPending((p) => p + 1);
-    fetch("http://localhost:3000/users")
+    fetch("https://movie-master-pro-api.vercel.app/users")
       .then((res) => res.json())
       .then((data) => {
         if (!toastUsersLoaded.current) {
@@ -44,7 +44,7 @@ const Home = () => {
   // load top rated movies from database
   useEffect(() => {
     setPending((p) => p + 1);
-    fetch("http://localhost:3000/movies/top-rated")
+    fetch("https://movie-master-pro-api.vercel.app/movies/top-rated")
       .then((res) => res.json())
       .then((data) => {
         if (!toastTopLoaded.current) {
@@ -63,7 +63,7 @@ const Home = () => {
   // load recent 6 movies
   useEffect(() => {
     setPending((p) => p + 1);
-    fetch("http://localhost:3000/movies/recent")
+    fetch("https://movie-master-pro-api.vercel.app/movies/recent")
       .then((res) => res.json())
       .then((data) => {
         if (!toastRecentLoaded.current) {

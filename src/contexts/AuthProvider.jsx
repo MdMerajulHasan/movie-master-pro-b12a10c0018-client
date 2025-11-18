@@ -13,7 +13,7 @@ import { auth } from "../firebase/firebase.init";
 const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   // register with email and password
   const register = (email, password) => {

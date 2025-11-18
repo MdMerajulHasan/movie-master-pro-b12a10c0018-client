@@ -25,7 +25,7 @@ const AddMovie = () => {
       country: form.country.value,
       addedBy: form.addedBy.value,
     };
-    fetch("http://localhost:3000/movies/add", {
+    fetch("https://movie-master-pro-api.vercel.app/movies/add", {
       method: "POST",
       headers: {
         "content-type": "application/json",

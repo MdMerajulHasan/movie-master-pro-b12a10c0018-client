@@ -9,7 +9,7 @@ const AllMovies = () => {
   const [moviesToShow, setMoviesToShow] = useState(allMovies);
   const handleFilter = () => {
     if (rating) {
-      fetch(`http://localhost:3000/movies?min=${rating}`)
+      fetch(`https://movie-master-pro-api.vercel.app/movies?min=${rating}`)
         .then((res) => res.json())
         .then((data) => {
           setMoviesToShow(data);

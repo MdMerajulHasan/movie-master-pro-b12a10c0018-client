@@ -27,14 +27,17 @@ const UpdateMovie = () => {
       country: form.country.value,
       addedBy: form.addedBy.value,
     };
-    fetch(`http://localhost:3000/movies/update/${movie._id}`, {
-      method: "PATCH",
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${user.accessToken}`,
-      },
-      body: JSON.stringify(updatedMovie),
-    })
+    fetch(
+      `https://movie-master-pro-api.vercel.app/movies/update/${movie._id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+          authorization: `Bearer ${user.accessToken}`,
+        },
+        body: JSON.stringify(updatedMovie),
+      }
+    )
       .then((result) => result.json())
       .then((data) => {
         if (data.matchedCount) {

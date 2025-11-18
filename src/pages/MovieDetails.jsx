@@ -18,7 +18,7 @@ const MovieDetails = () => {
       poster: movie.posterUrl,
       played: user.email,
     };
-    fetch(`http://localhost:3000/movies/watch-list`, {
+    fetch(`https://movie-master-pro-api.vercel.app/movies/watch-list`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(playedMovie),
@@ -36,7 +36,7 @@ const MovieDetails = () => {
 
   const handleDelete = (id) => {
     setLoading(true);
-    fetch(`http://localhost:3000/movies/${id}`, {
+    fetch(`https://movie-master-pro-api.vercel.app/movies/${id}`, {
       method: "DELETE",
     })
       .then((result) => result.json())
