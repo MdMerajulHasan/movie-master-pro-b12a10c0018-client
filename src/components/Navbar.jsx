@@ -42,13 +42,13 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 dark:bg-slate-900 shadow-sm">
       <div className="navbar-start">
         <div className="dropdown">
           <div
             tabIndex={0}
             role="button"
-            className="btn text-primary btn-ghost lg:hidden"
+            className="btn text-primary dark:text-white btn-ghost lg:hidden"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,20 +67,20 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow text-primary"
+            className="menu menu-sm dropdown-content bg-base-100 dark:bg-slate-800 rounded-box z-1 mt-3 w-52 p-2 shadow text-primary dark:text-white"
           >
             {links}
           </ul>
         </div>
         <a
           href="/"
-          className="btn btn-ghost font-bold text-xs md:text-xl lg:text-2xl text-primary"
+          className="btn btn-ghost font-bold text-xs md:text-xl lg:text-2xl text-primary dark:text-white"
         >
           Movie Master Pro
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-primary font-bold">
+        <ul className="menu menu-horizontal px-1 text-primary dark:text-white font-bold">
           {links}
         </ul>
       </div>
@@ -97,12 +97,12 @@ const Navbar = () => {
                 className="btn btn-ghost btn-circle avatar"
               >
                 <span>
-                  <ImProfile className="text-primary" size={40}></ImProfile>
+                  <ImProfile className="text-primary dark:text-white" size={40}></ImProfile>
                 </span>
               </div>
               <ul
                 tabIndex={0}
-                className="menu text-xs text-primary menu-sm dropdown-content mt-3 Z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                className="menu text-xs text-primary dark:text-white menu-sm dropdown-content mt-3 Z-[1] p-2 shadow bg-base-100 dark:bg-slate-800 rounded-box w-52"
               >
                 {user.photoURL ? (
                   <li className="flex justify-center items-center">

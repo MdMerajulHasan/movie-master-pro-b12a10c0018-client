@@ -11,11 +11,11 @@ const WatchList = () => {
   }
   return (
     <div>
-      <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">
+      <h2 className="pt-5 md:pt-10 mb-1 md:mb-4 text-primary dark:text-white font-bold text-2xl text-center md:text-4xl lg:text-6xl">
         Watch List
       </h2>
       {watchedMovies.length ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 w-11/12 mx-auto mb-5 md:mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 w-11/12 mx-auto pb-5 md:pb-10">
           {watchedMovies.map((movie) => {
             return (
               <div
@@ -29,13 +29,13 @@ const WatchList = () => {
                     alt="movie poster"
                   />
                 </div>
-                <div>{movie.movie}</div>
+                <div className="dark:text-white">{movie.movie}</div>
               </div>
             );
           })}
         </div>
       ) : (
-        <div className="flex mb-5 md:mb-10 flex-col gap-1 justify-center items-center">
+        <div className="flex pb-5 md:pb-10 flex-col gap-1 justify-center items-center">
           <p className="text-primary font-bold text-center">
             You Have Not Played Any Movie!
           </p>

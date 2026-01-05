@@ -13,7 +13,7 @@ const Root = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <Outlet></Outlet>
+      <div className="dark:bg-slate-950"><Outlet></Outlet></div>
       <Footer></Footer>
       <Toaster></Toaster>
     </div>

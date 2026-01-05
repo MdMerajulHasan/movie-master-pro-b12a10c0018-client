@@ -21,6 +21,7 @@ const Registration = () => {
         const user = result.user;
         setUser(user);
         navigate("/");
+        toast("Successfully Logged in user!");
       })
       .catch((error) => {
         setLoading(false);
@@ -57,7 +58,7 @@ const Registration = () => {
           body: JSON.stringify(userToDB),
         })
           .then(() => {
-            toast("User added TO DB!");
+            toast("User Successfully Added To DB!");
           })
           .then((error) => {
             setLoading(false);
@@ -76,48 +77,41 @@ const Registration = () => {
     return <Loader></Loader>;
   } else {
     return (
-      <div className="my-5 md:my-10flex w-4/5 md:w-1/2 mx-auto justify-center items-center text-primary">
+      <div className="py-5 md:py-10 flex w-4/5 md:w-1/2 mx-auto justify-center items-center text-primary dark:text-secondary">
         <form className="w-full" onSubmit={handleRegister}>
-          <h2 className="mb-1 md:mb-4 text-center font-bold text-xl md:text-2xl lg:text-4xl">
+          <h2 className="mb-1 md:mb-4 text-center dark:text-white font-bold text-xl md:text-2xl lg:text-4xl">
             Register
           </h2>
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give your name
             </legend>
-            <input
-              type="text"
-              name="name"
-              className="input w-full"
-              placeholder="Type name here"
-              required
-            />
+            <input type="text" name="name" className="input w-full" required />
           </fieldset>
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give your mail
             </legend>
-            <input
-              type="email"
-              name="email"
-              className="input w-full"
-              placeholder="Type email here"
-              required
-            />
+            <label className="input w-full validator">
+              <input type="email" name="email" required />
+            </label>
+            <div className="validator-hint hidden">
+              Enter valid email address
+            </div>
           </fieldset>
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give photo url
             </legend>
-            <input
-              type="url"
-              name="photoURL"
-              className="input w-full"
-              placeholder="Paste photo url here"
-            />
+            <label className="input validator w-full">
+              <input type="url" name="photoURL" />
+            </label>
+            <div className="validator-hint hidden">
+              Enter valid url link
+            </div>
           </fieldset>
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Create your password
             </legend>
             <label className="input w-full validator">
@@ -125,7 +119,6 @@ const Registration = () => {
                 type={showPassword ? "text" : "password"}
                 name="password"
                 required
-                placeholder="Type password here"
                 minLength="6"
                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
                 title="Must be more than 6 characters, including number, lowercase letter, uppercase letter"
@@ -152,7 +145,7 @@ const Registration = () => {
             Register
           </button>
           <div className="flex gap-2 justify-center items-center">
-            <p>Already have account?</p>
+            <p className="dark:text-white">Already have account?</p>
             <Link className="text-blue-500" to="/login">
               Login
             </Link>

@@ -20,6 +20,7 @@ const Login = () => {
         const currentUser = result.user;
         setUser(currentUser);
         navigate("/");
+        toast("Successfully Logged in user!");
       })
       .catch((error) => {
         setLoading(false);
@@ -40,6 +41,7 @@ const Login = () => {
         setUser(currentUser);
         e.target.reset();
         navigate("/");
+        toast("Successfully Logged in user!");
       })
       .catch((error) => {
         setLoading(false);
@@ -51,33 +53,36 @@ const Login = () => {
     return <Loader></Loader>;
   } else {
     return (
-      <div className="my-5 md:my-10 flex w-4/5 md:w-1/2 mx-auto text-secondary justify-center items-center">
+      <div className="py-5 md:py-10 flex w-4/5 md:w-1/2 mx-auto text-secondary dark:text-white justify-center items-center">
         <form className="w-full" onSubmit={handleLogin}>
           <h2 className="mb-1 md:mb-4 text-center font-bold text-xl md:text-2xl lg:text-4xl">
             Login
           </h2>
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-secondary">
+            <legend className="fieldset-legend text-secondary dark:text-white">
               Give your mail
             </legend>
-            <input
-              type="email"
-              name="email"
-              className="input w-full"
-              placeholder="Type email here"
-              required
-            />
+            <label className="input validator w-full">
+              <input
+                type="email"
+                name="email"
+                className="text-secondary"
+                required
+              />
+            </label>
+            <div className="validator-hint hidden">
+              Enter valid email address
+            </div>
           </fieldset>
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-secondary">
+            <legend className="fieldset-legend text-secondary dark:text-white">
               Give your password
             </legend>
-            <label className="input w-full">
+            <label className="input w-full text-secondary">
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
                 required
-                placeholder="Type password here"
                 title="Give password to login"
               />
               <span
@@ -96,8 +101,11 @@ const Login = () => {
             Login
           </button>
           <div className="flex gap-2 justify-center items-center">
-            <p>Already have account?</p>
-            <Link className="text-primary" to="/registration">
+            <p>Don't have account?</p>
+            <Link
+              className="text-primary dark:text-secondary"
+              to="/registration"
+            >
               Register
             </Link>
           </div>

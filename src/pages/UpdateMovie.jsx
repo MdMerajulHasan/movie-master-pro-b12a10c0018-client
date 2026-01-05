@@ -55,14 +55,14 @@ const UpdateMovie = () => {
     return <Loader></Loader>;
   } else {
     return (
-      <div className="flex mb-5 md:mb-10 w-4/5 md:w-1/2 mx-auto justify-center items-center text-primary">
+      <div className="flex pb-5 md:pb-10 w-4/5 md:w-1/2 mx-auto justify-center items-center text-primary dark:text-secondary">
         <form className="w-full" onSubmit={handleUpdate}>
-          <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">
+          <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary dark:text-white font-bold text-2xl text-center md:text-4xl lg:text-6xl">
             Update Movie
           </h2>
           {/*add title*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give movie name here
             </legend>
             <input
@@ -76,7 +76,7 @@ const UpdateMovie = () => {
           </fieldset>
           {/*add genre*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give movie genre here
             </legend>
             <input
@@ -90,7 +90,7 @@ const UpdateMovie = () => {
           </fieldset>
           {/*add releaseYear*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give movie release year here
             </legend>
             <input
@@ -104,7 +104,7 @@ const UpdateMovie = () => {
           </fieldset>
           {/*add director*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give director's name here
             </legend>
             <input
@@ -118,7 +118,7 @@ const UpdateMovie = () => {
           </fieldset>
           {/*add cast*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give movie cast here
             </legend>
             <input
@@ -132,7 +132,7 @@ const UpdateMovie = () => {
           </fieldset>
           {/*add rating*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give movie rating here
             </legend>
             <input
@@ -146,7 +146,7 @@ const UpdateMovie = () => {
           </fieldset>
           {/*add duration*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give movie duration in min
             </legend>
             <input
@@ -160,7 +160,7 @@ const UpdateMovie = () => {
           </fieldset>
           {/*add plotSummary*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give plotSummary here
             </legend>
             <input
@@ -174,7 +174,7 @@ const UpdateMovie = () => {
           </fieldset>
           {/*add posterUrl*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give thr Url of movie poster
             </legend>
             <input
@@ -188,7 +188,7 @@ const UpdateMovie = () => {
           </fieldset>
           {/*add language*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give movie language
             </legend>
             <input
@@ -202,7 +202,7 @@ const UpdateMovie = () => {
           </fieldset>
           {/*add country*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Give country name of movie
             </legend>
             <input
@@ -216,7 +216,7 @@ const UpdateMovie = () => {
           </fieldset>
           {/*add addedBy*/}
           <fieldset className="fieldset">
-            <legend className="fieldset-legend text-primary">
+            <legend className="fieldset-legend text-primary dark:text-white">
               Your logged in email
             </legend>
             <input
@@ -230,7 +230,7 @@ const UpdateMovie = () => {
           </fieldset>
           <button
             type="submit"
-            className="text-center mx-auto btn-primary w-full"
+            className="text-center mx-auto btn-primary w-full my-1"
           >
             Update
           </button>

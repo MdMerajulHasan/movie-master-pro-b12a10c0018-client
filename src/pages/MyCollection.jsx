@@ -12,8 +12,8 @@ const MyCollection = () => {
     return <Loader></Loader>;
   }
   return (
-    <div className="my-5 md:my-10">
-      <h2 className="mb-1 md:mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">
+    <div className="py-5 md:py-10">
+      <h2 className="mb-1 md:mb-4 text-primary dark:text-white font-bold text-2xl text-center md:text-4xl lg:text-6xl">
         My Collection
       </h2>
       {movies.length ? (

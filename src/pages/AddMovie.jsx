@@ -51,171 +51,134 @@ const AddMovie = () => {
     return <Loader></Loader>;
   }
   return (
-    <div className="flex mb-5 md:mb-10 w-4/5 md:w-1/2 mx-auto justify-center items-center text-primary">
+    <div className="flex pb-5 md:pb-10 w-4/5 md:w-1/2 mx-auto justify-center items-center text-primary">
       <form className="w-full" onSubmit={handleAdd}>
-        <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary font-bold text-2xl text-center md:text-4xl lg:text-6xl">
+        <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary dark:text-white font-bold text-2xl text-center md:text-4xl lg:text-6xl">
           Add A Movie
         </h2>
         {/*add title*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Give movie name here
           </legend>
-          <input
-            type="text"
-            name="title"
-            className="input w-full"
-            placeholder="Type movie name"
-            required
-          />
+          <input type="text" name="title" className="input w-full" required />
         </fieldset>
         {/*add genre*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Give movie genre here
           </legend>
-          <input
-            type="text"
-            name="genre"
-            placeholder="Type movie genre"
-            className="input w-full"
-            required
-          />
+          <input type="text" name="genre" className="input w-full" required />
         </fieldset>
         {/*add releaseYear*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Give movie release year here
           </legend>
           <input
             type="text"
             name="releaseYear"
             className="input w-full"
-            placeholder="Type movie release year"
             required
           />
         </fieldset>
         {/*add director*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Give director's name here
           </legend>
           <input
             type="text"
             name="director"
             className="input w-full"
-            placeholder="Type movie director"
             required
           />
         </fieldset>
         {/*add cast*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Give movie cast here
           </legend>
-          <input
-            type="text"
-            name="cast"
-            className="input w-full"
-            placeholder="Type movie cast"
-            required
-          />
+          <input type="text" name="cast" className="input w-full" required />
         </fieldset>
         {/*add rating*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Give movie rating here
           </legend>
-          <input
-            type="text"
-            name="rating"
-            className="input w-full"
-            placeholder="Type movie rating"
-            required
-          />
+          <input type="text" name="rating" className="input w-full" required />
         </fieldset>
         {/*add duration*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Give movie duration in min
           </legend>
           <input
             type="text"
             name="duration"
             className="input w-full"
-            placeholder="Type movie duration (min)"
             required
           />
         </fieldset>
         {/*add plotSummary*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Give plotSummary here
           </legend>
           <input
             type="text"
             name="plotSummary"
             className="input w-full"
-            placeholder="Type movie plot summary"
             required
           />
         </fieldset>
         {/*add posterUrl*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Give thr Url of movie poster
           </legend>
           <input
             type="url"
             name="posterUrl"
             className="input w-full"
-            placeholder="Type poster URL"
             required
           />
         </fieldset>
         {/*add language*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Give movie language
           </legend>
           <input
             type="text"
             name="language"
             className="input w-full"
-            placeholder="Type movie language"
             required
           />
         </fieldset>
         {/*add country*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Give country name of movie
           </legend>
-          <input
-            type="text"
-            name="country"
-            className="input w-full"
-            placeholder="Type movie country"
-            required
-          />
+          <input type="text" name="country" className="input w-full" required />
         </fieldset>
         {/*add addedBy*/}
         <fieldset className="fieldset">
-          <legend className="fieldset-legend text-primary">
+          <legend className="fieldset-legend text-primary dark:text-white">
             Your logged in email
           </legend>
           <input
             type="email"
             name="addedBy"
-            placeholder={user?.email || "Your Email"}
-            defaultValue={user?.email}
+            value={user?.email}
             readOnly
             className="input w-full"
           />
         </fieldset>
         <button
           type="submit"
-          className="text-center mx-auto btn-primary w-full"
+          className="text-center mx-auto btn-primary w-full my-1"
         >
           Submit
         </button>

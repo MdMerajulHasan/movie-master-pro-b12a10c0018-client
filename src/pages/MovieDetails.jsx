@@ -57,8 +57,8 @@ const MovieDetails = () => {
     return <Loader></Loader>;
   } else {
     return (
-      <div className="hero bg-base-200 my-5 md:my-10">
-        <div className="hero-content text-xs md:text-base text-primary flex-col md:flex-row-reverse">
+      <div className="hero bg-base-200 dark:bg-slate-950 py-5 md:py-10">
+        <div className="hero-content text-xs md:text-base text-primary dark:text-white flex-col md:flex-row-reverse">
           <img
             src={movie.posterUrl}
             className="max-w-sm rounded-lg shadow-2xl"

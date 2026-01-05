@@ -55,9 +55,7 @@ const router = createBrowserRouter([
       {
         path: "/movies/my-collection/:email",
         loader: ({ params }) =>
-          fetch(
-            `https://movie-master-pro-api.vercel.app/movies/my-collection/${params.email}`
-          ),
+          fetch(`https://movie-master-pro-api.vercel.app/movies/my-collection/${params.email}`),
         element: (
           <PrivateRoute>
             <MyCollection></MyCollection>
@@ -67,9 +65,7 @@ const router = createBrowserRouter([
       {
         path: "/watch-list/:email",
         loader: ({ params }) =>
-          fetch(
-            `https://movie-master-pro-api.vercel.app/watch-list/${params.email}`
-          ),
+          fetch(`https://movie-master-pro-api.vercel.app/watch-list/${params.email}`),
         element: (
           <PrivateRoute>
             <WatchList></WatchList>
