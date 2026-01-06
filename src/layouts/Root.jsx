@@ -13,7 +13,9 @@ const Root = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="dark:bg-slate-950"><Outlet></Outlet></div>
+      <div className="dark:bg-slate-950 min-h-screen">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
       <Toaster></Toaster>
     </div>
