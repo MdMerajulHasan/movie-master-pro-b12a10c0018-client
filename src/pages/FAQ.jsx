@@ -5,7 +5,7 @@ const FAQ = () => {
   return (
     <div className="py-5 md:py-10 text-primary dark:text-white">
       <h2 className="mb-1 md:mb-4 font-bold text-2xl text-center md:text-4xl lg:text-6xl">
-        My Collection
+        Frequently Asked Questions
       </h2>
       <div className="space-y-1">
         <details

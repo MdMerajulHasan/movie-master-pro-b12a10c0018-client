@@ -9,6 +9,7 @@ import toast from "react-hot-toast";
 import Loader from "../components/Loader";
 import { ErrorBoundary } from "react-error-boundary";
 import { motion } from "framer-motion";
+import ContactUs from "../components/ContactUs";
 const errorFallback = ({ error }) => {
   return <p>Something Went Wrong: {error.message}</p>;
 };
@@ -252,7 +253,7 @@ const Home = () => {
           </motion.div>
         </div>
         {/* ------------------------------------------------------------------ */}
-        {/* why choose movie master pro section */}
+        {/* features section */}
         <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary dark:text-white font-bold text-2xl text-center md:text-4xl lg:text-6xl">
           Features
         </h2>
@@ -373,6 +374,9 @@ const Home = () => {
             </ul>
           </motion.div>
         </div>
+        {/* ------------------------------------------------------------------ */}
+        {/* about platform section */}
+        <ContactUs></ContactUs>
         {/* ------------------------------------------------------------------ */}
       </div>
     </ErrorBoundary>
