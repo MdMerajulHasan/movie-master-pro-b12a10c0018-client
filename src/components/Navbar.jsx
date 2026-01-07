@@ -37,6 +37,9 @@ const Navbar = () => {
       ) : (
         ""
       )}
+      <li>
+        <NavLink to="/faq">FAQ</NavLink>
+      </li>
     </>
   );
   return (

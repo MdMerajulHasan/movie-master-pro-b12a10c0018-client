@@ -11,6 +11,7 @@ import Registration from "../pages/Registration";
 import Error404 from "../pages/Error404";
 import PrivateRoute from "./PrivateRoute";
 import WatchList from "../pages/WatchList";
+import FAQ from "../pages/FAQ";
 
 const router = createBrowserRouter([
   {
@@ -63,7 +64,9 @@ const router = createBrowserRouter([
       {
         path: "/watch-list/:email",
         loader: ({ params }) =>
-          fetch(`https://movie-master-pro-api.vercel.app/watch-list/${params.email}`),
+          fetch(
+            `https://movie-master-pro-api.vercel.app/watch-list/${params.email}`
+          ),
         element: (
           <PrivateRoute>
             <WatchList></WatchList>
@@ -72,6 +75,7 @@ const router = createBrowserRouter([
       },
       { path: "/login", element: <Login></Login> },
       { path: "/registration", element: <Registration></Registration> },
+      { path: "/faq", element: <FAQ></FAQ> },
     ],
   },
 ]);
