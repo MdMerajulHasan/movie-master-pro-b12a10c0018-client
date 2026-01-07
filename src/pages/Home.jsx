@@ -141,7 +141,7 @@ const Home = () => {
             <img
               className="w-[300px] h-[150px] mx-auto rounded-md"
               src="https://i.ibb.co.com/VcRKVyGh/action.webp"
-              alt=""
+              alt="genre pic action"
             />
             <button
               className="text-white font-bold bg-linear-to-r from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] rounded-sm w-full mt-1"
@@ -160,7 +160,7 @@ const Home = () => {
             <img
               className="w-[300px] h-[150px] mx-auto rounded-md"
               src="https://i.ibb.co.com/Xf0fL8nL/drama.jpg"
-              alt=""
+              alt="genre pic drama"
             />
             <button
               className="text-white font-bold bg-linear-to-r from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] rounded-sm w-full mt-1"
@@ -179,7 +179,7 @@ const Home = () => {
             <img
               className="w-[300px] h-[150px] mx-auto rounded-md"
               src="https://i.ibb.co.com/N2XfGz8Y/comedy.webp"
-              alt=""
+              alt="genre pic comedy"
             />
             <button
               className="text-white font-bold bg-linear-to-r from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] rounded-sm w-full mt-1"
@@ -198,7 +198,7 @@ const Home = () => {
             <img
               className="w-[300px] h-[150px] mx-auto rounded-md"
               src="https://i.ibb.co.com/Df5Nrv8S/sifi.jpg"
-              alt=""
+              alt="genre pic si-fi"
             />
             <button
               className="text-white font-bold bg-linear-to-r from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] rounded-sm w-full mt-1"
@@ -209,7 +209,7 @@ const Home = () => {
           </motion.div>
         </div>
         {/* ------------------------------------------------------------------------*/}
-        {/* about platform section */}
+        {/* why choose movie master pro section */}
         <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary dark:text-white font-bold text-2xl text-center md:text-4xl lg:text-6xl">
           Why Choose Movie Master Pro
         </h2>
@@ -249,6 +249,67 @@ const Home = () => {
             className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
           >
             <p className="mb-2">Edit Added Movie Feature</p>
+          </motion.div>
+        </div>
+        {/* ------------------------------------------------------------------ */}
+        {/* why choose movie master pro section */}
+        <h2 className="mt-5 md:mt-10 mb-1 md:mb-4 text-primary dark:text-white font-bold text-2xl text-center md:text-4xl lg:text-6xl">
+          Features
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-11/12 mx-auto text-center pb-5 md:pb-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+          >
+            <p className="mb-2">Registration With Email and Password</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+          >
+            <p className="mb-2">Adding Movie</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+          >
+            <p className="mb-2">Update Added Movie</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+          >
+            <p className="mb-2">Delete Added Movie</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+          >
+            <p className="mb-2">Explore My Collection</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+          >
+            <p className="mb-2">Checking Watch History</p>
           </motion.div>
         </div>
         {/* ------------------------------------------------------------------ */}
