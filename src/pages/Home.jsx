@@ -10,6 +10,7 @@ import Loader from "../components/Loader";
 import { ErrorBoundary } from "react-error-boundary";
 import { motion } from "framer-motion";
 import ContactUs from "../components/ContactUs";
+import Comments from "../components/Comments";
 const errorFallback = ({ error }) => {
   return <p>Something Went Wrong: {error.message}</p>;
 };
@@ -98,7 +99,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold text-2xl md:text-3xl lg:text-4xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold text-2xl md:text-3xl lg:text-4xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="underline mb-2">Total Movies</p>
             <p>{movies.length}</p>
@@ -108,7 +109,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold text-2xl md:text-3xl lg:text-4xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold text-2xl md:text-3xl lg:text-4xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="underline mb-2">Total Users</p>
             <p>{users.length}</p>
@@ -220,7 +221,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="mb-2">Secure Authentication Using Firebase</p>
           </motion.div>
@@ -229,7 +230,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="mb-2">Watch-list Feature</p>
           </motion.div>
@@ -238,7 +239,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="mb-2">Add Movie Feature</p>
           </motion.div>
@@ -247,7 +248,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="mb-2">Edit Added Movie Feature</p>
           </motion.div>
@@ -263,7 +264,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="mb-2">Registration With Email and Password</p>
           </motion.div>
@@ -272,7 +273,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="mb-2">Adding Movie</p>
           </motion.div>
@@ -281,7 +282,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="mb-2">Update Added Movie</p>
           </motion.div>
@@ -290,7 +291,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="mb-2">Delete Added Movie</p>
           </motion.div>
@@ -299,7 +300,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="mb-2">Explore My Collection</p>
           </motion.div>
@@ -308,7 +309,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold lg:text-2xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="mb-2">Checking Watch History</p>
           </motion.div>
@@ -324,7 +325,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold text-2xl md:text-3xl lg:text-4xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold text-2xl md:text-3xl lg:text-4xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="underline mb-2">Supported Platforms</p>
             <ul className="w-1/2 md:w-4/5 lg:w-1/2 mx-auto text-xs md:text-base">
@@ -351,7 +352,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold text-2xl md:text-3xl lg:text-4xl rounded-xl py-12 md:py-15 lg:py-20"
+            className="w-full bg-linear-to-br from-red-500 dark:from-[#3b82f6] to-red-300 dark:to-[#93c5fd] text-white font-bold text-2xl md:text-3xl lg:text-4xl rounded-md py-12 md:py-15 lg:py-20"
           >
             <p className="underline mb-2">Features of Platforms</p>
             <ul className="w-1/2 md:w-4/5 lg:w-1/2 mx-auto text-xs md:text-base">
@@ -375,7 +376,10 @@ const Home = () => {
           </motion.div>
         </div>
         {/* ------------------------------------------------------------------ */}
-        {/* about platform section */}
+        {/* contact us section */}
+        <Comments></Comments>
+        {/* ------------------------------------------------------------------ */}
+        {/* contact us section */}
         <ContactUs></ContactUs>
         {/* ------------------------------------------------------------------ */}
       </div>
