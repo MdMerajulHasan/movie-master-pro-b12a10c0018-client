@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <div className="bg-black dark:bg-slate-900 py-5 md:py-10 text-white text-xs font-bold">
-      <div className="flex flex-col justify-center items-center md:flex-row md:justify-around md:items-start">
+      <div className="flex space-y-4 w-1/3 md:w-full flex-col items-start mx-auto md:flex-row md:justify-around md:items-start">
         <div>
           <h5 className="text-base">Go to</h5>
           <ul className="space-y-1">
@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-center"> Copyright &copy; 2025 Movie Master Pro </p>
+      <p className="text-center mt-4 md:mt-0"> Copyright &copy; 2025 Movie Master Pro </p>
     </div>
   );
 };
