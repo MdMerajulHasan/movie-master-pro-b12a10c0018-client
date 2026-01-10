@@ -10,7 +10,8 @@ const Limit = 10;
 const AllMovies = () => {
   const { loading, setLoading } = use(AuthContext);
   const [params] = useSearchParams();
-  const genre = params.get("genre");
+  const genreParam = params.get("genre");
+  const [genre, setGenre] = useState(genreParam);
 
   const [moviesToShow, setMoviesToShow] = useState([]);
   const [rating, setRating] = useState(0);
@@ -83,6 +84,7 @@ const AllMovies = () => {
 
   const handleSearchDone = () => {
     setSearchText(searchInput);
+    setRating(0);
     setCurrentPage(0);
   };
 
@@ -119,6 +121,22 @@ const AllMovies = () => {
             Search
           </button>
         </div>
+        <select
+          onChange={(e) => setGenre(e.target.value)}
+          className="select w-full md:w-auto border-primary dark:border-secondary text-primary dark:bg-slate-800 dark:text-white font-bold md:text-xs"
+        >
+          <option value="">Filter Genre</option>
+          <option value="Action">Action</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Romance">Romance</option>
+          <option value="Drama">Drama</option>
+          <option value="Crime">Crime</option>
+          <option value="Superhero">Superhero</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Animation">Animation</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Horror">Horror</option>
+        </select>
         <select
           onChange={(e) => handleFilter(e.target.value)}
           className="select w-full md:w-auto border-primary dark:border-secondary text-primary dark:bg-slate-800 dark:text-white font-bold md:text-xs"
