@@ -118,6 +118,15 @@ const Navbar = () => {
                 <li>User: {user.displayName}</li>
 
                 <li>Email: {user.email}</li>
+
+                <Link
+                  to={`/dashboard`}
+                  className="mx-auto w-full text-center"
+                >
+                  <span className="btn btn-primary dark:btn-secondary w-full h-4 md:h-6 my-1">
+                    Dashboard
+                  </span>
+                </Link>
               </ul>
             </div>
           </div>

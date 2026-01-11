@@ -17,6 +17,7 @@ const MovieDetails = () => {
       movie: movie.title,
       poster: movie.posterUrl,
       played: user.email,
+      genre: movie.genre,
     };
     fetch(`https://movie-master-pro-api.vercel.app/movies/watch-list`, {
       method: "POST",

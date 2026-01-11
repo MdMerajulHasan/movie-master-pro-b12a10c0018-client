@@ -12,6 +12,9 @@ import Error404 from "../pages/Error404";
 import PrivateRoute from "./PrivateRoute";
 import WatchList from "../pages/WatchList";
 import FAQ from "../pages/FAQ";
+import Dashboard from "../layouts/Dashboard";
+import DashboardHome from "../pages/DashboardHome";
+import DashboardProfile from "../pages/DashboardProfile";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +78,25 @@ const router = createBrowserRouter([
       { path: "/login", element: <Login></Login> },
       { path: "/registration", element: <Registration></Registration> },
       { path: "/faq", element: <FAQ></FAQ> },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>,
+      </PrivateRoute>
+    ),
+    errorElement: <Error404></Error404>,
+    children: [
+      {
+        path: "/dashboard",
+        element: <DashboardHome></DashboardHome>,
+      },
+      {
+        path: "/dashboard/profile",
+        element: <DashboardProfile></DashboardProfile>,
+      },
     ],
   },
 ]);
