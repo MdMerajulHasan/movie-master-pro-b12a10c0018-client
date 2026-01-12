@@ -1,6 +1,5 @@
 import React, { use, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
-import { div } from "framer-motion/client";
 import Loader from "../components/Loader";
 import toast from "react-hot-toast";
 import { BiUser } from "react-icons/bi";
