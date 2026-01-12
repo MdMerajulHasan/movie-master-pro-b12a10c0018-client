@@ -1,12 +1,33 @@
 import React, { use } from "react";
-import { Link, useLoaderData } from "react-router";
+import { Link, useLoaderData, useNavigate } from "react-router";
 import { AuthContext } from "../contexts/AuthContext";
 import Loader from "../components/Loader";
+import toast from "react-hot-toast";
 
 const WatchList = () => {
   const watchedMovies = useLoaderData();
-  console.log(watchedMovies);
-  const { loading } = use(AuthContext);
+  const { loading, setLoading, user} = use(AuthContext);
+  const navigate = useNavigate()
+
+  const handleRemove = (id) => {
+    setLoading(true);
+    fetch(`http://localhost:3000/watched/${id}`, {
+      method: "DELETE",
+    })
+      .then((result) => result.json())
+      .then((data) => {
+        if (data.deletedCount) {
+          setLoading(false);
+          toast("Movie Deleted From Watch History!");
+          navigate(`/watch-list/${user.email}`);
+        }
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast("Ops! Can't Remove Movie: " + err.message);
+      });
+  };
+
   if (loading) {
     return <Loader></Loader>;
   }
@@ -20,7 +41,7 @@ const WatchList = () => {
           {watchedMovies.map((movie) => {
             return (
               <div
-                className="flex flex-col justify-center text-primary font-bold items-center"
+                className="flex space-y-0.5 flex-col justify-center text-primary font-bold items-center"
                 key={movie._id}
               >
                 <div>
@@ -31,6 +52,12 @@ const WatchList = () => {
                   />
                 </div>
                 <div className="dark:text-white">{movie.movie}</div>
+                <button
+                  onClick={() => handleRemove(movie._id)}
+                  className="btn btn-primary w-20"
+                >
+                  Remove
+                </button>
               </div>
             );
           })}

@@ -68,6 +68,7 @@ const Login = () => {
                 type="email"
                 name="email"
                 className="text-secondary"
+                defaultValue="merajuljim@gmail.com"
                 required
               />
             </label>
@@ -84,6 +85,7 @@ const Login = () => {
                 type={showPassword ? "text" : "password"}
                 name="password"
                 required
+                defaultValue="Jim123"
                 title="Give password to login"
               />
               <span

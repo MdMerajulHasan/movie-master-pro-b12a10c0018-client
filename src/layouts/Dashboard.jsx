@@ -33,7 +33,7 @@ const Dashboard = () => {
     </>
   );
   return (
-    <div className="h-screen">
+    <div className="h-screen bg-base-200 dark:bg-slate-950">
       <div className="navbar z-50 sticky top-0 bg-base-100 dark:bg-slate-900 shadow-sm">
         <div className="navbar-start">
           <div>

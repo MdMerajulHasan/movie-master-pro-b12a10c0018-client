@@ -15,7 +15,7 @@ const renderLabel = ({ name, percent }) => {
 
 const GenrePieChart = ({ data }) => {
   return (
-    <div className="w-full h-80 bg-base-200 dark:bg-slate-800 rounded-md shadow p-4">
+    <div className="w-full mt-0 h-64 bg-base-200 dark:bg-slate-800 rounded-md shadow p-4">
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie

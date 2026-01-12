@@ -31,7 +31,7 @@ const DashboardHome = () => {
       <h2 className="pt-5 md:pt-10 mb-1 md:pb-4 text-primary dark:text-white font-bold text-2xl text-center md:text-4xl lg:text-6xl">
         Total Watched
       </h2>
-      <div className="h-screen">
+      <div className="h-screen bg-base-200 dark:bg-slate-800">
         <div className="w-11/12 mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ const DashboardHome = () => {
             <p>{watchedData.length}</p>
           </motion.div>
         </div>
-        <h2 className="pt-5 md:pt-10 mb-1 md:pb-4 text-primary dark:text-white font-bold text-2xl text-center md:text-4xl lg:text-6xl">
+        <h2 className="pt-5 bg-base-200 dark:bg-slate-800 my-0 md:pt-10 mb-1 md:pb-4 text-primary dark:text-white font-bold text-2xl text-center md:text-4xl lg:text-6xl">
           Watched Data Chart
         </h2>
         {chartData.length > 0 ? (
