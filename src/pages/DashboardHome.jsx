@@ -46,7 +46,13 @@ const DashboardHome = () => {
       <h2 className="pt-5 md:pt-10 mb-1 md:pb-4 text-primary dark:text-white font-bold text-2xl text-center md:text-4xl lg:text-6xl">
         Watched Data Chart
       </h2>
-      <GenrePieChart data={chartData}></GenrePieChart>
+      {chartData.length > 0 ? (
+        <GenrePieChart data={chartData}></GenrePieChart>
+      ) : (
+        <p className="text-primary font-bold text-center">
+          You Have Not Watched Any Movie Yet!
+        </p>
+      )}
     </div>
   );
 };

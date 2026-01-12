@@ -19,14 +19,15 @@ const Dashboard = () => {
       <li>
         <NavLink
           className="flex gap-1 items-center"
-          to={`/dashboard`}
+          to={`/dashboard/${user.email}`}
         >
           <BiHome></BiHome> <span className="hidden md:flex">Home</span>
         </NavLink>
       </li>
       <li>
         <NavLink className="flex gap-1 items-center" to="/dashboard/profile">
-          <CgProfile></CgProfile> <span className="hidden md:flex">Profile</span>
+          <CgProfile></CgProfile>{" "}
+          <span className="hidden md:flex">Profile</span>
         </NavLink>
       </li>
     </>
