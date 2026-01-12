@@ -39,7 +39,7 @@ const AddMovie = () => {
           toast("Movie Added Successfully!");
           setLoading(false);
           form.reset();
-          navigate(`/movies/my-collection/${user.email}`);
+          navigate(`/movies/my-collection`);
         }
       })
       .catch((err) => {

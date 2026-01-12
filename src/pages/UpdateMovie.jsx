@@ -43,7 +43,7 @@ const UpdateMovie = () => {
         if (data.matchedCount) {
           setLoading(false);
           toast("Movie Updated Successfully!");
-          navigate(`/movies/my-collection/${user?.email}`);
+          navigate(`/movies/my-collection`);
         }
       })
       .catch((error) => {
