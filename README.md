@@ -1,6 +1,6 @@
 Overview: A website where people can explore movies, add movies, update their added movies etc.
 
-Live link: https://silver-stardust-bda902.netlify.app/
+Live link: https://movie-master-pro-2025.netlify.app/
 
 Technologies: React Router, React.js, Tailwind, Firebase.
 
